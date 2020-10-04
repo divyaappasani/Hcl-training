@@ -1,0 +1,52 @@
+ 
+
+#successMessage { 
+
+    color: rgb(37, 201, 37); 
+
+    font-size: 1.5rem; 
+
+} 
+
+ 
+
+#result { 
+
+    text-align: center; 
+
+    display: inline-block; 
+
+    margin-left: 0; 
+
+ 
+
+} 
+
+ 
+
+#resulTable, 
+
+th, 
+
+tr, 
+
+td { 
+
+    font-size: 1.5rem; 
+
+    font-weight: bold; 
+
+    padding: 0.5rem; 
+
+    border-collapse: collapse; 
+
+    border: 1px solid black; 
+    
+
+} 
+
+td{ 
+
+    font-weight : lighter; 
+
+}
