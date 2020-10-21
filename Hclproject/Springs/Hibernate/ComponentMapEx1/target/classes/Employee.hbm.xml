@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Oct, 2020 10:09:54 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="org.hcl.entities.Employee" table="EMPLOYEE">
+        <id name="eno" type="int" column="ENO">
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String" column="NAME"/>
+        <property name="sal" type="int"/>
+		<component name="address" class="org.hcl.entities.Address">
+			<property name="hno" column="HNO"/>
+			<property name="streetName" column="STREETNAME"/>
+			<property name="loc" column="LOCATION"></property>
+		</component>     
+    </class>
+</hibernate-mapping>

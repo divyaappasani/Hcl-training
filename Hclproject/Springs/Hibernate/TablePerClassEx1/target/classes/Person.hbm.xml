@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 20 Oct, 2020 11:27:36 AM by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+ <class discriminator-value="coach" name="org.hcl.entities.Person" table="PERSON">
+  <id name="personId" type="int">
+   <generator class="assigned"/>
+  </id>
+  <discriminator column="category"  insert="true" not-null="true"/>
+  <property generated="never" lazy="false" name="firstName" type="java.lang.String"/>
+  <property generated="never" lazy="false" name="lastName" type="java.lang.String"/>
+  <subclass name="org.hcl.entities.BatsMan" discriminator-value="batsman">
+  	<property name="battingHand" type="string"/>
+  	<property name="highestScore" type="integer"/>
+  </subclass>
+ <subclass name="org.hcl.entities.Bowler" discriminator-value="bowler">
+ 	<property name="bowlingHand" type="string"/>
+ 	<property name="wickets" type="int"/>
+ </subclass>
+ </class>
+</hibernate-mapping>
